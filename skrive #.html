@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while -løkke</title>
+</head>
+<body>
+<p id="svar">
+
+</p>
+<script>
+    var utskrift="";
+    var svar = "";
+    var teller=0;
+    while(teller<10){
+        teller++;
+        svar =svar + "#";
+        utskrift=utskrift + svar + "<br>";
+    }
+    document.getElementById("svar").innerHTML=(utskrift);
+</script>
+
+</body>
+</html>

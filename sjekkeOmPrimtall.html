@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>primtall</title>
+</head>
+<body>
+<p id = "svar">
+    her skal svaret stå
+</p>
+<script>
+    var tall=Number(prompt("skriv et naturlig tall"));
+    var dividend =2;
+    var rest;
+    var primtall=true;
+    var svarEl=document.querySelector("#svar");
+    while(primtall===true && tall>dividend){
+        rest=tall % dividend;
+        if (rest===0){
+            primtall = false;
+        }
+        dividend++;
+    }
+    if (primtall=== true) {
+        svarEl.innerHTML =(tall + " er et primtall");
+    }
+    else{
+        svarEl.innerHTML =(tall + " er ikke et primtall");
+    }
+</script>
+</body>
+</html>

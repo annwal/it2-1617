@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id = "svar">
+    her skal svaret stå
+</p>
+
+<script>
+    //her skal koden stå
+    var areal=0;
+    var radius = 0;
+    var lengde = 0;
+    var hoyde =0;
+    var bredde = 0;
+    var figur = prompt("Hvilken figur skal du regne arealet av? Sirkel (S), parallellogram (P) eller drake (D)").toUpperCase();//store bokstaver
+    var feil=false;
+
+
+    if (figur==="S"){
+        radius =Number(prompt("Hva er radius?"));
+        areal=Math.PI*Math.pow(radius,2);
+    }
+    else if(figur==="P"){
+        lengde =Number(prompt("Hva er lengden?"));
+        hoyde =Number(prompt("Hva er høyden?"));
+        areal=lengde*hoyde;
+    }
+    else if(figur==="D"){
+        lengde =Number(prompt("Hva er lengden?"));
+        bredde =Number(prompt("Hva er bredden?"));
+        areal=lengde*bredde;
+    }
+    else {
+
+        feil=true;
+    }
+    if (feil===false){
+        document.getElementById("svar").innerHTML=("Arealet er "+areal.toFixed(2) ); //2 desimaler
+    }
+    else{
+        document.getElementById("svar").innerHTML=("du har tastet inn feil geometrisk figur");
+    }
+
+</script>
+</body>
+</html>

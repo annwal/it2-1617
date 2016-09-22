@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valutakalkulator</title>
+</head>
+<body>
+
+<p id = "svar">
+    her skal svaret stå
+</p>
+
+<script>
+    //her skal koden stå
+    //deklarerer variabler og gir dem verdi
+    var kurs=0;
+    var svar=0;
+    var feil=false;
+    //disse variablene får verdi ved at brukeren taster inn
+    var valuta = prompt("Hvilken valuta vil du veksle? EUR GBP eller USD").toUpperCase();//store bokstaver
+    var belop =Number(prompt("Hvilket beløp vil du veksle?"));
+   //velger riktig kurs ut fra hvilken valutatype som er tastet inn
+    if (valuta==="USD"){
+        kurs=7.12;
+    }
+    else if(valuta==="EUR"){
+        kurs=9.13;
+    }
+    else if(valuta==="GBP"){
+        kurs=11.7;
+    }
+        else {//brukeren har tastet inn noe annet enn de tre valutakodene
+            feil=true;
+    }
+
+    if (feil ===false){//regner ut beløpet i NOK og skriver svaret på nettsiden
+        svar=belop*kurs;
+        document.getElementById("svar").innerHTML=(svar.toFixed(2) + " NOK");//2 desimaler
+    }
+    else {//skriver en feilmelding på nettsiden
+        document.getElementById("svar").innerHTML = ("du har tastet inn feil valutatype");
+    }
+</script>
+</body>
+</html>

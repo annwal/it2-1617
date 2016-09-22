@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dager i måned</title>
+</head>
+<body>
+<p id = "feil">
+    Ingen feil
+</p>
+<p id = "svar">
+    her skal svaret stå
+</p>
+
+<script>
+    //her skal koden stå
+    var dager=0;
+    var maned = prompt("Oppgi en måned").toUpperCase();//store bokstaver
+
+switch (maned) {
+    case ("JANUAR" || "MARS" || "MAI" || "JULI" || "AUGUST" || "OKTOBER" || "DESEMBER"):
+        dager = 31;
+        break;
+    case("FEBRUAR"):
+        var skuddar = prompt("Er det skuddår?").toUpperCase();
+        if (skuddar === "JA") {
+            dager = 29;
+        }
+        else {
+            dager = 28;
+        }
+        break;
+    case ("APRIL" || "JUNI" || "SEPTEMBER" || "NOVEMBER"):
+        dager = 30;
+    default:
+        document.getElementById("svar").innerHTML=("Skriv en måned");
+}
+    document.getElementById("feil").innerHTML=("Det er "+dager+" dager i "+maned.toLowerCase());
+</script>
+</body>
+</html>

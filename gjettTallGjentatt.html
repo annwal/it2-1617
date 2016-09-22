@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gjett tall</title>
+</head>
+<body>
+<p id="forklaring">Gjett et tall mellom 1 og 100</p>
+<input type="text" id="tekstfelt">
+<input type="submit" value="Trykk her" id="knapp">
+
+<p id = "svar">
+
+</p>
+
+<script>
+    //her skal koden stå
+    var svarEl=document.querySelector("#svar");
+    var tekstfeltEl=document.querySelector("#tekstfelt");
+    var hemmelig = Math.floor(Math.random() * 100 + 1);
+    var teller =0;
+
+    var knappEl=document.querySelector("#knapp");//oppretter knappeobjekt som variabel
+    knappEl.addEventListener("click", knappFunksjon);//oppretter lytter og beskriver at lytteren skal lytte etter klikk og utføre funksjonen
+
+    function knappFunksjon() {//funksjonen utføres når vi trykker på knappen
+        var svar;
+        var gjettet = Number(tekstfeltEl.value);
+        teller++;
+        if (hemmelig === gjettet) {
+            svar = "Du gjettet riktig! Du gjettet "+ teller +"ganger";
+            knappEl.removeEventListener("click",knappFunksjon);
+        }
+        else {
+            if (hemmelig > gjettet) {
+                svar = "For lavt"
+            }
+            else {
+                svar = "For høyt";
+            }
+            tekstfeltEl.value="";
+        }
+        svarEl.innerHTML = (svar);
+    }
+</script>
+</body>
+</html>

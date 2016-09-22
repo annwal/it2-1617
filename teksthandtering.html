@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teksthåndtering</title>
+</head>
+<body>
+<p id="svar">
+
+</p>
+<script>
+    var tekst = "Dette er teksten vi jobber med.";  //bruk gjerne prompt for å legge inn brukerens tekst
+    var svar = "";
+    var stopp =tekst.length;
+    var antall=0;
+
+    // finne enkelttegn i tekststrengen
+
+    //for(var i=0;i<stopp;i++){
+    //    svar=svar+"_"+tekst[i];
+    //}
+    //document.getElementById("svar").innerHTML=(svar);
+
+    //bytte ut tegn i tekststrengen
+
+    //tekst=tekst.replace(/t/g,"*");
+    //tekst=tekst.replace(/\s/g,"_");
+    //document.getElementById("svar").innerHTML=(tekst);
+
+    //finne hvor i teksten et tegn forekommer først
+
+    //var plass = tekst.indexOf("t");//hva skjer hvis du søker etter et tegn som ikke er i teksten?
+    //document.getElementById("svar").innerHTML=(plass);
+
+    //finne antall forekomster av et tegn
+
+    for(var i=0;i<stopp;i++){
+        if(tekst[i]==="e"){
+            antall++;
+        }
+    }
+    /document.getElementById("svar").innerHTML=(antall);
+
+
+</script>
+
+</body>
+</html>

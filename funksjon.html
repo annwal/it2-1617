@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funksjon</title>
+</head>
+<body>
+<p id="svar">
+    her skal det skrives
+</p>
+<script>
+    siHei();
+
+    function siHei(){
+        var tall=Math.floor(Math.random()*3)+1;
+        var hilsen;
+        if(tall===1){
+            hilsen="Hallo!";
+        }
+        else if(tall===2){
+            hilsen="Hei!";
+        }
+        else{
+            hilsen ="God dag!";
+        }
+        document.getElementById("svar").innerHTML=(hilsen);
+    }
+</script>
+</body>
+</html>

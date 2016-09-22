@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yatzy</title>
+</head>
+<body>
+<p id="svar">
+    her skal svaret stå
+</p>
+<script>
+    var antall=5;
+    var kast1=terning(antall);
+    antall=Number(prompt("Du fikk" + kast1+" Hvor mange terninger vil du kaste om igjen?"));
+    var kast2=terning(antall);
+    document.getElementById("svar").innerHTML="Du fikk " + kast1 +" i første kast. I andre kast fikk du "+ kast2;
+
+    function terning(ant) {
+        var svar="";
+        for(var i=1;i<=ant;i++){
+            var resultat= Math.floor(Math.random()*6+1);
+            svar=svar + " "+ resultat;
+        }
+        return svar;
+    }
+
+</script>
+</body>
+</html>

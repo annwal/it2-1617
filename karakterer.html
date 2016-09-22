@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karakterer</title>
+</head>
+<body>
+<p id = "svar">
+    her skal svaret stå
+</p>
+
+<script>
+    var karakter;
+    var poeng =Number(prompt("Hvor mange poeng fikk du på prøven?"));
+    if (poeng>=92){
+        karakter="6";
+    }
+    else if(poeng>=80){
+        karakter="5";
+    }
+    else if(poeng>=62){
+        karakter="4";
+    }
+    else if(poeng>=40){
+        karakter="3";
+    }
+    else if(poeng>=25){
+        karakter="2";
+    }
+    else {
+        karakter="1";
+    }
+
+    document.getElementById("svar").innerHTML=(karakter);
+</script>
+</body>
+</html>

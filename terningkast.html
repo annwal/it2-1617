@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terningkast</title>
+</head>
+<body>
+<p id="svar">
+    her kommer teksten
+</p>
+<script>
+    var toLike = false;
+    var antallForsok=0;
+    while (!toLike){
+        antallForsok++;
+        var terning1=terning();
+        var terning2=terning();
+        if(terning1===terning2){
+            toLike=true;
+            document.getElementById("svar").innerHTML="Du fikk to " + terning1 + "-ere på "+ antallForsok + " forsøk";
+        }
+    }
+    function terning(){
+        return Math.floor(Math.random()*6+1);
+    }
+
+</script>
+</body>
+</html>
